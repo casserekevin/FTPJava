@@ -1,4 +1,4 @@
-package views;
+package client.views;
 
 import java.awt.EventQueue;
 import java.awt.Font;
@@ -7,11 +7,11 @@ import java.awt.event.ActionListener;
 
 import javax.swing.JButton;
 import javax.swing.JDialog;
-import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 
+@SuppressWarnings("serial")
 public class ClientOptionMenu extends JDialog {
 
 	private JPanel contentPane;
@@ -66,7 +66,7 @@ public class ClientOptionMenu extends JDialog {
 		btn_downloadFile.setFont(new Font("Tahoma", Font.BOLD, 14));
 		btn_downloadFile.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				DownloadFileView downloadFileView = new DownloadFileView();
+				ClientFileNameView downloadFileView = new ClientFileNameView();
 				downloadFileView.setVisible(true);
 				
 				setFilename(downloadFileView.getFilename());

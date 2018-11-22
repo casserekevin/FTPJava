@@ -6,7 +6,7 @@ import java.io.RandomAccessFile;
 import java.nio.ByteBuffer;
 import java.nio.channels.FileChannel;
 
-public class MainTests {
+public class DownloadFileTest {
 
 	public static void main(String[] args) {
 		

@@ -1,19 +1,16 @@
-package views;
+package client.views;
 
-import java.awt.BorderLayout;
-import java.awt.FlowLayout;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 import javax.swing.JButton;
 import javax.swing.JDialog;
-import javax.swing.JPanel;
-import javax.swing.border.EmptyBorder;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.JTextField;
-import java.awt.event.ActionListener;
-import java.awt.event.ActionEvent;
 
-public class DownloadFileView extends JDialog {
+@SuppressWarnings("serial")
+public class ClientFileNameView extends JDialog {
 	private JLabel lbl_fileName;
 	private JTextField txtf_fileName;
 	private JButton btn_ok;
@@ -25,7 +22,7 @@ public class DownloadFileView extends JDialog {
 	 */
 	public static void main(String[] args) {
 		try {
-			DownloadFileView dialog = new DownloadFileView();
+			ClientFileNameView dialog = new ClientFileNameView();
 			dialog.setDefaultCloseOperation(JDialog.DISPOSE_ON_CLOSE);
 			dialog.setVisible(true);
 		} catch (Exception e) {
@@ -36,7 +33,7 @@ public class DownloadFileView extends JDialog {
 	/**
 	 * Create the dialog.
 	 */
-	public DownloadFileView() {
+	public ClientFileNameView() {
 		setTitle("Nome do arquivo");
 		setBounds(100, 100, 300, 140);
 		setDefaultCloseOperation(JDialog.DISPOSE_ON_CLOSE);

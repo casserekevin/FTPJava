@@ -6,7 +6,7 @@ import java.io.ObjectOutputStream;
 import java.net.Socket;
 import java.net.UnknownHostException;
 
-import views.ClientIPView;
+import client.views.connection.ClientConnectionView;
 
 public class Client {
 	
@@ -14,13 +14,13 @@ public class Client {
 	
 	public static void main(String[] args) {
 		
-		ClientIPView clientIPView = new ClientIPView();
-		clientIPView.setVisible(true);
+		ClientConnectionView clientConnectionView = new ClientConnectionView();
+		clientConnectionView.setVisible(true);
 		
 		ClientDirectory clientDirectory = new ClientDirectory();
 		
 		try {
-			Client.socket = new Socket(clientIPView.getIpServer(), clientIPView.getPort());
+			Client.socket = new Socket(clientConnectionView.getIpServer(), clientConnectionView.getPort());
 			new ClientInstance(Client.socket, new ObjectOutputStream(Client.socket.getOutputStream()), new ObjectInputStream(Client.socket.getInputStream()), clientDirectory.rootFolder());
 		} catch (UnknownHostException e) {
 			// TODO Auto-generated catch block

@@ -10,10 +10,10 @@ import java.net.Socket;
 import java.nio.ByteBuffer;
 import java.nio.channels.FileChannel;
 
+import client.views.ClientOptionMenu;
 import messages.MessageContent;
 import messages.Reply;
 import messages.Request;
-import views.ClientOptionMenu;
 
 public class ClientInstance {
 	
